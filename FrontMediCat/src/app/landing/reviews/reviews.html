@@ -1,0 +1,27 @@
+<section id="resenas">
+  <h2>Lo que dicen nuestros clientes</h2>
+  <span class="servicios__linea" aria-hidden="true"></span>
+
+  <div class="resenas__grid">
+    @for (resena of resenas; track resena.autor) {
+      <article class="resena-card">
+        <div class="resena-card__header">
+          <div class="estrellas">
+            @for (star of [1,2,3,4,5]; track star) {
+              <i class="fa-solid fa-star"></i>
+            }
+          </div>
+          <i class="fa-solid fa-quote-right resena-comilla"></i>
+        </div>
+        <p class="resena-texto">{{ resena.texto }}</p>
+        <div class="resena-autor">
+          <img [src]="resena.imagen" [alt]="resena.autor">
+          <div>
+            <strong>{{ resena.autor }}</strong>
+            <span>{{ resena.mascota }}</span>
+          </div>
+        </div>
+      </article>
+    }
+  </div>
+</section>

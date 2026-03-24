@@ -1,0 +1,19 @@
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+<section id="servicios">
+  <h2>Nuestros Servicios</h2>
+  <span class="servicios__linea" aria-hidden="true"></span>
+  <p>Ofrecemos una amplia gama de cuidados médicos y estéticos diseñados para cubrir todas las necesidades de salud de tus mascotas.</p>
+
+  <div class="servicios__grid" aria-label="Listado de servicios">
+    @for (servicio of servicios; track servicio.titulo) {
+      <article class="servicio-card">
+        <div class="servicio-card__icono" [ngClass]="servicio.fondoClass" aria-hidden="true">
+          <i [class]="'fas ' + servicio.icono"></i>
+        </div>
+        <h3>{{ servicio.titulo }}</h3>
+        <p>{{ servicio.descripcion }}</p>
+      </article>
+    }
+  </div>
+</section>

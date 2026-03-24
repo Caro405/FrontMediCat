@@ -1,0 +1,71 @@
+.navegacion {
+  background-color: var(--color-fondo-nav);
+  border-bottom: 1px solid var(--color-borde);
+  min-height: 70px;
+  padding: 8px clamp(20px, 5vw, 180px);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.logo img {
+  width: 100px;
+  height: 100px;
+  display: block;
+}
+
+.menu {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  gap: 48px;
+  margin-left: auto;
+  flex-wrap: wrap;
+}
+
+.menu li:last-child {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.menu a {
+  text-decoration: none;
+  color: var(--color-primario);
+  font-size: 1rem;
+  font-weight: 700;
+  transition: color 0.3s;
+  cursor: pointer;
+}
+
+.menu a:hover { color: var(--color-primario-oscuro); }
+
+.menu .btn-cita {
+  background-color: var(--color-primario);
+  color: var(--blanco) !important;
+  padding: 10px 34px;
+  border-radius: 999px;
+  box-shadow: 0 3px 7px rgba(0,0,0,0.15);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+
+.menu .btn-cita:hover { background-color: var(--color-primario-oscuro); }
+
+.menu .btn-cita i { color: white; font-size: 1.2rem; }
+
+@media (max-width: 992px) {
+  .menu { gap: 24px; }
+  .menu .btn-cita { padding: 14px 24px; }
+}
+
+@media (max-width: 768px) {
+  .navegacion { flex-direction: column; padding: 14px 20px; }
+  .menu { justify-content: center; margin-left: 0; }
+}

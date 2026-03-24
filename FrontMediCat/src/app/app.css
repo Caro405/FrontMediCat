@@ -1,0 +1,13 @@
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css');
+
+:root {
+  --color-primario:        #007a80;
+  --color-primario-oscuro: #004f54;
+  --color-primario-claro:  #4a9a9e;
+  --color-fondo-nav:       #f0f7f7;
+  --color-fondo:           #ffffff;
+  --color-borde:           #d0e4e4;
+  --blanco:                #ffffff;
+  --gris-claro:            #f5f5f5;
+  --border-radius-card:    20px;
+}

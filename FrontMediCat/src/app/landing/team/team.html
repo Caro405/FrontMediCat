@@ -1,0 +1,17 @@
+<section id="equipo">
+  <h2>Nuestro Equipo Médico</h2>
+  <p>Profesionales altamente calificados y apasionados por brindar el mejor cuidado a tus compañeros peludos.</p>
+
+  <div class="equipo__grid" aria-label="Listado del equipo médico">
+    @for (medico of medicos; track medico.nombre) {
+      <article class="tarjeta-medico">
+        <img [src]="medico.imagen" [alt]="medico.nombre">
+        <div class="tarjeta-medico__contenido">
+          <h3>{{ medico.nombre }}</h3>
+          <h4>{{ medico.especialidad }}</h4>
+          <p>{{ medico.descripcion }}</p>
+        </div>
+      </article>
+    }
+  </div>
+</section>

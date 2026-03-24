@@ -1,0 +1,30 @@
+<section id="nosotros">
+  <div class="nosotros__izquierda">
+    <h2>¿Por qué confiar en Medicat?</h2>
+    <p>
+      En Medicat entendemos que tu mascota es parte de tu familia. Por eso, hemos diseñado un espacio donde la
+      ciencia y el corazón se unen para ofrecer la mejor atención posible.
+    </p>
+
+    <div class="nosotros__razones">
+      @for (razon of razones; track razon.titulo) {
+        <div class="razon">
+          <span class="razon__icono"><i [class]="razon.icono"></i></span>
+          <div>
+            <h4>{{ razon.titulo }}</h4>
+            <p>{{ razon.descripcion }}</p>
+          </div>
+        </div>
+      }
+    </div>
+  </div>
+
+  <div class="nosotros__stats">
+    @for (stat of stats; track stat.numero) {
+      <div class="stat-card" [ngClass]="stat.clase">
+        <span class="stat-numero">{{ stat.numero }}</span>
+        <span class="stat-label">{{ stat.label }}</span>
+      </div>
+    }
+  </div>
+</section>
